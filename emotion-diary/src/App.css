@@ -33,3 +33,63 @@ body {
   min-height: 100vh;
   padding: 0 1rem 0;
 }
+
+/* MyButton */
+
+.MyButton {
+  padding: 0.5rem 2rem 0.5rem;
+
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+
+  white-space: nowrap;
+
+  font-size: 1rem;
+  font-family: 'Jua', sans-serif;
+}
+
+.MyButton_default {
+  background-color: #ececec;
+  color: black;
+}
+
+.MyButton_positive {
+  background-color: #64c964;
+  color: white;
+}
+
+.MyButton_negative {
+  background-color: #fd565f;
+  color: white;
+}
+
+/* HEADER */
+
+header {
+  padding: 2rem 0 2rem;
+
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e2e2e2;
+}
+
+header > div {
+  display: flex;
+}
+
+header .head_btn_left {
+  width: 25%;
+  justify-content: start;
+}
+
+header .head_text {
+  width: 50%;
+  font-size: 1.5rem;
+  justify-content: center;
+}
+
+header .head_btn_right {
+  width: 25%;
+  justify-content: end;
+}
