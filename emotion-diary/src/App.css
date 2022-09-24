@@ -93,3 +93,33 @@ header .head_btn_right {
   width: 25%;
   justify-content: end;
 }
+
+/* DiaryList */
+
+.DiaryList .menu_wrapper {
+  margin: 1.5rem 0 2rem;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.DiaryList .menu_wrapper .right_col {
+  flex-grow: 1;
+}
+
+.DiaryList .menu_wrapper .right_col button {
+  width: 100%;
+}
+
+.DiaryList .ControlMenu {
+  margin-right: 1rem;
+  padding: 0.6rem 1.5rem 0.6rem;
+
+  border: none;
+  border-radius: 5px;
+  background-color: #ececec;
+
+  cursor: pointer;
+
+  font-family: 'Jua', sans-serif;
+}
