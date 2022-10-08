@@ -7,6 +7,7 @@ import MyButton from './MyButton';
 import EmotionItem from './EmotionItem';
 import { getStringDate } from '../util/date';
 import { emotionList } from '../util/emotion';
+import { useCallback } from 'react';
 
 const DiaryEditor = ({ isEdit, originData }) => {
   const contentRef = useRef();
@@ -15,9 +16,9 @@ const DiaryEditor = ({ isEdit, originData }) => {
   const [date, setDate] = useState(getStringDate(new Date()));
 
   const { onCreate, onEdit, onRemove } = useContext(DiaryDispatchContext);
-  const handleClickEmote = (emotion) => {
+  const handleClickEmote = useCallback((emotion) => {
     setEmotion(emotion);
-  };
+  }, []);
 
   const navigate = useNavigate();
 
