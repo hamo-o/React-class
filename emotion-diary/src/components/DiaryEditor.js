@@ -37,7 +37,7 @@ const emotionList = [
 
 const getStringDate = (date) => {
   let year = date.getFullYear();
-  let month = date.getFullMonth() + 1;
+  let month = date.getMonth() + 1;
   let day = date.getDate();
 
   if (month < 10) {
@@ -54,7 +54,7 @@ const DiaryEditor = ({ isEdit, originData }) => {
   const contentRef = useRef();
   const [content, setContent] = useState('');
   const [emotion, setEmotion] = useState(3);
-  const [date, setDate] = useState();
+  const [date, setDate] = useState(getStringDate(new Date()));
 
   const { onCreate, onEdit } = useContext(DiaryDispatchContext);
   const handleClickEmote = (emotion) => {
@@ -85,7 +85,7 @@ const DiaryEditor = ({ isEdit, originData }) => {
 
   useEffect(() => {
     if (isEdit) {
-      // setDate(getStringDate(new Date(parseInt(originData.date))));
+      setDate(getStringDate(new Date(parseInt(originData.date))));
       setEmotion(originData.emotion);
       setContent(originData.content);
     }
